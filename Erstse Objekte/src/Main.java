@@ -9,30 +9,42 @@ public class Main {
 		
 		int meineZahl = 3;
 		
-		auto1.setzeAttribute("Audi");
-//		auto2.setzeAttribute("Mercedes", "C-Klasse");
-//		auto3.setzeAttribute("BMW", "3er");
-//		
-//		auto1.serienNummer = "4894078963";
-//		auto3.anzahlSitze = 5;
-//		
-//		auto1.tankVolumen = 72;		// Angaben in l
-//		auto1.verbrauch = 8;		// Angaben in l
-//		
-//		auto2.tankVolumen = 90;
-//		
-//		
-////		auto1.druckeMarkeUndModell();
-////		auto1.berechneReichweite();
-////		auto1.druckeReichweite();
-////		Wurde in druckeInfo() zusammengefasst		
-//		auto1.druckeInfo();	// Gibt das selbe aus, wie Zeile die letzen Zeilen
+		auto1.setzeAttribute("Audi", "A6", "FA284932", 72, 8, 160, 2000, 5);
+		auto2.setzeAttribute("Mercedes", "E-Klasse", "FM12312332", 68, 9, 180, 3000, 7);
+		auto3.setzeAttribute("BMW", "4er", "FB239021", 54, 7, 165, 2250, 4);
+		
+		auto1.fahre(1000);
+		auto1.tanke(50);
+		
+//		auto1.druckeInfo();	
 //		auto2.druckeInfo();
 //		auto3.druckeInfo();
+		
+//		System.out.println();
+//		auto1.druckeSerienNummer();	
+//		auto1.druckeMarke();
+		
+		
+		// String test2 = auto1.getSerienNummer();
+		
+		
 //		
+//		System.out.println("Die Seriennummer lautet " + auto1.getSerienNummer());
+//		System.out.println("Wir haben insgesamt " + (auto1.getAnzahlSitze() + auto2.getAnzahlSitze() + auto3.getAnzahlSitze()) + " Sitzplätze.");
+//		
+//		System.out.println();
+//		System.out.println(auto1.fehlerAuslesen("SuperGeheimesPasswort"));
+//		// Auto1 KW ausgeben
+		
+		// Auto1 KW ändern
+		
+		// Auto1 KW wieder ausgeben
+		
+		// Hat sich was verändert?
 		
 		
 		
+		//"Die Seriennummer von Audi A6 lautet FA284932"
 		
 	}
 

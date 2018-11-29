@@ -1,100 +1,103 @@
-import java.util.Scanner;
+import java.util.Scanner;		// Import der Scanner Klasse
 
-//import com.sun.java.util.jar.pack.Instruction.Switch;
 public class Eingaben {
 
 	public static void main(String[] args) {
-//		String meinText ="Beispiel Text";
+//		String meinText = "Beispiel Text";
 //		System.out.println(meinText);
 //		
-		Scanner derScanner = new Scanner(System.in);
+		Scanner derScanner = new Scanner(System.in);		// Neues Objekt derScanner von Klasse Scanner
+		
 //		
-//		//String meineEingabe = eingabe von der Konsole Übernehmen
-//		System.out.print("Engabe:");
+//		// String meineEingabe = Eingabe von der Konsole übernehmen
+//		System.out.print("Eingabe: ");
 //		String meineEingabe = derScanner.nextLine();
 //		// String Eingaben mit .nextLine();
 //		// Scanner wartet auf Eingabe und Enter
-//		System.out.println("Unsere Eingabe lautet:" + meineEingabe);
+//		System.out.println("Unsere Eingabe lautet: " + meineEingabe);
 //		
-//		System.out.print("Engabe:");
+//		System.out.print("Eingabe: ");
 //		int meineZahl = derScanner.nextInt();
-//		// Int Eingaben mit .nextInt();
+//		
+//		// int Eingaben mit .nextInt();
 //		System.out.println("Unsere Zahl lautet: " + meineZahl);
 //		
-//		System.out.print("Eingabe:");
+//		// Eingabe annehmen als int Wert
+//		// Quadrat bilden (mit sich selbst multiplizieren)
+//		// "Die Quadratzahl von 4 ist 16" ausgeben
+//		
+//		System.out.println("Quadratzahlen");
+//		System.out.print("Eingabe ");
 //		int zahl = derScanner.nextInt();
-//		System.out.println("Die Quadrahtzahl von " + zahl + " ist " + zahl*zahl);
+//		System.out.println("Die Quadratzahl von " + zahl + " ist " + zahl*zahl);
 //		
-//		
-//		System.out.print("Eingabe 1:");
-//		int meine1Zahl = derScanner.nextInt();
-//		
-//		System.out.print("Eingabe 2:");
-//		int meine2Zahl = derScanner.nextInt();
-//		
-//		System.out.println("das Ergebnis von " +  meine1Zahl + " und " + meine2Zahl + " ist " +(meine1Zahl + meine2Zahl));
-	
-		
-		// Eingabe annehmen als int Wert
-		// Qadraht bilden (mit sich selbst multiplizieren
-		//"Die Quadratzahl von 4 is 16" ausgeben
-//		System.out.print("kommazahlen einlesen: ");
-//		double kommaZahl = derScanner.nextDouble();
-//		// In der Konsole müssen wir das Kommazeichen(,)verwenden, im Programmcode einen Punkt (.)
-//		System.out.println(kommaZahl);
-		
-		//Char
-//		System.out.println("Zeichen einlesen");
-//		char meinZeichen = derScanner.nextLine().charAt(0);
-//		System.out.println("Das Zeichen lautet = " + meinZeichen);
-		
-		// Eingabe Zahl1, auswahl Operator, Eingabe Zahl2, Ausgabe Ergebnis
+//		// Zwei ganze Zahlen annehmen, diese dann addieren und Ergebnis ausgeben
+//		System.out.println("Addition");
+//		System.out.print("Eingabe Zahl 1: ");
+//		int zahl1 = derScanner.nextInt();
+//		System.out.print("Eingabe Zahl 2: ");
+//		int zahl2 = derScanner.nextInt();
+//		System.out.println(zahl1 + " + " + zahl2 + " = " + (zahl1+zahl2));
+
+		// Double Eingaben mit .nextDouble();
+		// System.out.print("Kommazahlen einlesen: ");
+		// double kommaZahl = derScanner.nextDouble();
+		// In der Konsole müssen wir das Kommazeichen (,) verwenden, im Programmcode
+		// einen Punkt (.)
+		// System.out.println(kommaZahl);
+
+		// Float Eingaben
+//		float z1 = derScanner.nextFloat();
+//		float z2 = derScanner.nextFloat();
+//		System.out.println(z1/z2);
+
+		// Char Eingaben
+		// System.out.print("Zeichen einlesen: ");
+		// char meinZeichen = derScanner.next().charAt(0);
+		// System.out.println("Das Zeichen lautet " + meinZeichen);
+
+		// Eingabe Zahl1, Auswahl Operator, Eingabe Zahl2, Ausgabe Ergebnis
 		System.out.println("Rechner");
-		System.out.println("Eingabe Zahl1");
-		double z1 =derScanner.nextDouble();
-	
-//		int z1 = ...
-		System.out.println("Eingabe Operator");
-		String s = derScanner.nextLine();
-		int Operator = derScanner.nextLine().charAt(0);
-//		int operator = ...
-		System.out.println("Eingabe Zahl2");
-		double z2 =derScanner.nextDouble();	
-//		int z2 = ...
-		switch (Operator) {
+
+		double z1, z2, ergebnis;
+		// Mehrere Variablen vom gleichen Datentyp können mit Komma getrennt deklariert
+		// werden
+		char operator;
+
+		System.out.print("Zahl 1: ");
+		z1 = derScanner.nextDouble();
+		System.out.print("Operator: ");
+		operator = derScanner.next().charAt(0);
+		System.out.print("Zahl 2: ");
+		z2 = derScanner.nextDouble();
+
+		switch (operator) {
 		case '+':
-			System.out.println("Ergebnis = " + (z1 + z2));
-            break;
-
-        case '-':
-        	System.out.println("Ergebnis = " + (z1 - z2));
-            break;
-
-        case '*':
-            System.out.println("Ergebnis = " + (z1 * z2));
-            break;
-
-        case '/':
-            System.out.println("Ergebnis = " + (z1 / z2));
-            break;
-        case '%':
-        	System.out.println("Ergebnis = " + (z1 % z2));
+			ergebnis = z1 + z2;
+			System.out.println(String.valueOf(z1) + " " + operator + " " + z2 + " = " + ergebnis);
 			break;
-
+		case '-':
+			ergebnis = z1 - z2;
+			System.out.println(z1 + " " + operator + " " + z2 + " = " + ergebnis);
+			break;
+		case '*':
+			ergebnis = z1 * z2;
+			System.out.println(z1 + " " + operator + " " + z2 + " = " + ergebnis);
+			break;
+		case '/':
+			ergebnis = z1 / z2;
+			System.out.println(z1 + " " + operator + " " + z2 + " = " + ergebnis);
+			break;
+		case '%':
+			ergebnis = z1 % z2;
+			System.out.println(z1 + " " + operator + " " + z2 + " = " + ergebnis);
+			break;
 		default:
-			System.out.println("Fehleingabe");
-			break;
+			System.out.println("Operator nicht definiert");
 		}
 		
-/*//		wenn +
-		wenn -
-		wenn *
-		wenn /
-		wenn %
-		
-		switch case
-*/	
-		
+		derScanner.close();			// Scanner sollte immer geschlossen werden.
+
 	}
 
 }

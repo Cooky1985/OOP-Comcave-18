@@ -12,7 +12,7 @@ public class Einfuehrung {
 		int meineGanzeZahl = 4;
 
 		// Komma Zahl
-		double meineKommaZahl = 7;
+		double meineKommaZahl = 7.0;
 
 		System.out.print("Meine ganze Zahl lautet "); // "" gibt immer genau das aus, was in den Anführungszeichen steht
 		System.out.println(meineGanzeZahl); // Gibt den Wert von meineGanzeZahl aus
@@ -81,18 +81,21 @@ public class Einfuehrung {
 		// Bei expliziten Werten switch case
 		switch(meineGanzeZahl) {
 		case 8:
+		case 9: 
 			System.out.println("Nur eine 8");
 			break;
 		case 10:
 			System.out.println("Bei einer 10...");
-			
+			// break;		// Wenn nicht gesetzt, wird der nächste Fall ebenfalls ausgeführt ...	
 		case 5: 
 			System.out.println("... gibt es eine 5 dazu");
-			break;
+			break;			// ... bis zum nächsten break
+		default: 			// Wie "else" bei if-else	=> Wenn kein anderer Fall zutrifft, dann default
+			System.out.println("Kein Fall trifft zu!");
 		}
 
 		// Schleifen
-		// For Schleife						1. Zählvariable + Ausgangswert		2. Bedingung	3. Anweisung
+		// For Schleife						1. Laufvariable + Ausgangswert		2. Bedingung	3. Anweisung
 		for(int i = 10; i>= 1; i-=5) {		// ++ Inkrekment: Erhöhe um 1 			-- Dekrement: Erniedrige um 1
 			System.out.println(i);
 		}
@@ -105,36 +108,54 @@ public class Einfuehrung {
 			
 		System.out.println();
 			
-		// Fakultät
-		// 5!=5*4*3*2*1
+		// Fakultät => multipliziert alle natürlichen Zahlen von 1 - n miteinander. 
+		// 5!=5*4*3*2(*1)
 		// 10!=10*9*8*7*6*5*4*3*2*1
 
-		int start = 5;
-		int f = 1;
+		int ende = 5;
+		int f = 2;
 		
 		// 3! = 3*2*1
 		
-		for(int i = 1; i<= start; i++) {
+		for(int i = 3; i<= ende; i++) {
 			f *= i; 	// f = f*i;
 		}
 		
-		System.out.println("Fakulät von " + start + " ist " + f);
+		System.out.println("Fakulät von " + ende + " ist " + f);
 		
 		
 		// While Schleife
 		int i = 2;
-		int j = 4;
-		while(i <= 5 || j == 4) {
+		int j = 3;
+		
+		String a = "Hallo";
+		String b = "Welt";
+		
+		while(a =="Hallo" && b=="Welt") {
+			System.out.println("Ein einfaches & geht auch");
+		}
+		
+		while(i <= 5 && j == 4) {			// 	|| oder			&& und
+											//	&& Logische Prüfung von und	& Bitweise Und-Verknüpfung (1010 & 1100 = 1000)
+											// 	|| Logische Prüfung von oder	| Bitweise Oder-Verknüpfung (1010 | 1100 = 1110)
+											//	Bei Schleifen nehmen wir die logische Prüfung (&& ||)
+											// 	== Abfrage		= Zuweisung
 			System.out.println("Test");
 			i++;
-			j =5;
 		}
 		
 		// Do While Schleife
 		i = 5;
 		do {
 			System.out.println("Do while führt mindestens einmal aus!");
-		} while(i == 2);
+			i--;
+		} while(i >= 2);
+		
+		System.out.println("Programm ist beendet!");
+		
+		//
+		//
+		//
 	}
 
 }
